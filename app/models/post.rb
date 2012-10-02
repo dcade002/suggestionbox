@@ -1,3 +1,4 @@
 class Post < ActiveRecord::Base
-  attr_accessible :description, :votes
+  	belongs_to :user
+  	attr_accessible :description, :votes
 end
