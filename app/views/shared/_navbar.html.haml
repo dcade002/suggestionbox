@@ -8,9 +8,9 @@
       %a.brand{href: "#"} Sheet-o-Meter
       .container-fluid.nav-collapse
         %ul.nav.pull-right
-          %li=link_to "Home",     "#"
-          %li=link_to "About",    "#"
-          %li=link_to "Sign in",  "#"
+          %li=link_to "Home",     root_path
+          %li=link_to "About",    about_path
+          %li=link_to "Sign in",  signin_path
           -# if user_signed_in?
             %li.dropdown
               =link_to current_user.name, "#", class: "dropdown-toggle", id: 'user-info', data: {toggle: "dropdown"}

@@ -29,11 +29,9 @@
 
   %body
     = render 'shared/navbar'
-    .container-fluid
-      .row-fluid
-        .center.hero-unit
-          = bootstrap_flash
-          = yield
+    .container
+      = bootstrap_flash
+      = yield
       = render 'layouts/footer'
 
     = javascript_include_tag "application"
