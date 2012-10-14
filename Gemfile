@@ -15,6 +15,7 @@ group :production do
 end
 
 gem 'haml'
+gem 'haml-rails'
 
 
 gem 'devise'

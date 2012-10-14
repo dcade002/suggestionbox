@@ -5,7 +5,6 @@ Suggestionbox::Application.routes.draw do
 
   #resources :users, only: :show
   root :to => 'static_pages#home'
-
   resources :posts
 
   # The priority is based upon order of creation:
