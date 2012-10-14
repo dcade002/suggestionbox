@@ -1,12 +1,10 @@
 Suggestionbox::Application.routes.draw do
-  get "static_pages/home"
-
   get "static_pages/about"
 
   devise_for :users
 
   #resources :users, only: :show
-  #root to: => ''
+  root to: => 'static_pages#home'
 
   resources :posts
 
