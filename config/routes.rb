@@ -1,17 +1,9 @@
 Suggestionbox::Application.routes.draw do
-
-
   root :to => 'static_pages#home'
 
-  match 'home', :to => 'users#index'
-
-  namespace :users do
-    root :to => 'users#index'
+  resources :users do
+    resources :posts
   end
-
-
-
-  resources :posts
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
