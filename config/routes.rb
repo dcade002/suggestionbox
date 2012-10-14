@@ -1,10 +1,16 @@
 Suggestionbox::Application.routes.draw do
-  get "static_pages/about"
 
-  devise_for :users
 
-  #resources :users, only: :show
   root :to => 'static_pages#home'
+
+  match 'home', :to => 'users#index'
+
+  namespace :users do
+    root :to => 'users#index'
+  end
+
+
+
   resources :posts
 
   # The priority is based upon order of creation:

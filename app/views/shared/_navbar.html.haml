@@ -1,0 +1,20 @@
+.navbar.navbar-fixed-top
+  .navbar-inner
+    .container-fluid
+      %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.brand{href: "#"} Sheet-o-Meter
+      .container-fluid.nav-collapse
+        %ul.nav.pull-right
+          %li=link_to "Home",     "#"
+          %li=link_to "About",    "#"
+          - if user_signed_in?
+            %li.dropdown
+              =link_to current_user.name, "#", class: "dropdown-toggle", id: 'user-info', data: {toggle: "dropdown"}
+              %ul.dropdown-menu(role='menu' aria-labelledby='user-info')
+                %li= link_to "Sign out", destroy_user_session_path, method: :delete
+
+          - else
+            %li=link_to "Sign in",  "#"
