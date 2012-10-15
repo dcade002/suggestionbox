@@ -6,12 +6,9 @@ Suggestionbox::Application.routes.draw do
   match '/signin' => 'sessions#new', via: :get
   match '/logout' => 'sessions#destroy', via: :get
 
+  resources :users
   resources :sessions, only: [:new, :create, :destroy]
-
-  resources :users do
-
-    resources :posts
-  end
+  resources :posts, only: [:create, :destroy]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

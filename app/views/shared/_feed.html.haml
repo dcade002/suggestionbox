@@ -1,0 +1,4 @@
+- if @feed.any?
+  %ol.posts
+    = render partial: 'shared/feed_item', collection: @feed
+  = will_paginate @feed

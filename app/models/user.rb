@@ -12,6 +12,12 @@ class User < ActiveRecord::Base
   before_save { self.email.downcase! }
   before_save :create_remember_token
 
+  has_many :posts, dependent: :destroy
+
+  def feed
+    Post.where("user_id = ?", id)
+  end
+
   private
 
   def create_remember_token
