@@ -1,6 +1,5 @@
 %h1 Sign Up
 .row
   .span6.offset3
-    = form_for(@user) do |f|
-      = render 'shared/error_messages'
-      = render :partial => 'form'
+    = render 'shared/error_messages'
+    = render :partial => 'form'

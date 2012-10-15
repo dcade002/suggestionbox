@@ -1,10 +1,10 @@
 Suggestionbox::Application.routes.draw do
   root :to => 'static_pages#home'
 
-  match '/about' => 'static_pages#about'
-  match '/signup' => 'users#new'
-  match '/signin' => 'sessions#new'
-  match '/logout' => 'sessions#destroy', via: :delete
+  match '/about' => 'static_pages#about', via: :get
+  match '/signup' => 'users#new', via: :get
+  match '/signin' => 'sessions#new', via: :get
+  match '/logout' => 'sessions#destroy', via: :get
 
   resources :sessions, only: [:new, :create, :destroy]
 
