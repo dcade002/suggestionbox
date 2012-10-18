@@ -1,0 +1,21 @@
+$(document).ready(function() {
+
+  	// Handler for .ready() called.
+	$("#login-form").hide();
+	$("#signup-form").hide();
+	
+	$("#login").click(function() {
+		$("#login").hide();
+		$("#login-form").show();
+		$("#signup-form").hide();
+	});
+
+	$("#signup").click(function() {
+		$("#signup").hide();
+		$("#signup-form").show();
+		$("#login-form").hide();
+	});
+	
+
+});
+
