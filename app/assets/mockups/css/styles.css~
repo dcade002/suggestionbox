@@ -361,7 +361,7 @@ body
 .container
 {
 	width: 90%
-	height: 900px;
+	height: 1200px;
 	overflow: visible;
 	padding-left: 5%;
 	padding-right: 9%;
@@ -385,12 +385,14 @@ body
 
 #login-form, #signup-form
 {
-	width: 100%;
+	width: 110%;
 }
+
+
 
 #login, #signup, .home-panel form input
 {
-	width: 100%;
+	width: 90%;
 	height: 25px;
 	padding-left: 14px;
 	padding-right: 14px;
@@ -479,3 +481,14 @@ body
 	border-bottom: none;
 	border-radius: none;
 }
+
+#login
+{
+	margin-bottom: 20px;
+}
+
+#signup
+{
+	margin-bottom: 100px;
+}
+
