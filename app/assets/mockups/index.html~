@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/scripts.js"></script>
+	</head>
+	<body>
+		<!--[if gte IE 9]>
+	  <style type="text/css">
+		.gradient {
+		   filter: none;
+		}
+	  </style>
+	<![endif]-->
+		<div class="container">
+			<section class="banner">
+				<img class="logo" src="img/logo.png" />
+			</section>
+			<section class="home-panel">
+				<a id="login" class="home-btn btn action-btn">Log In</a>
+				<form id="login-form" class="hide">
+					<input type="submit" class="submit home-btn btn" value="Log In" />
+					<input placeholder="Username:" type="text" name="login-user" value="" />
+					<input placeholder="Password: " type="password" name="login-pass" value="" />
+				</form>
+				<a id="signup" class="home-btn btn action-btn">Sign Up</a>
+				<form id="signup-form" class="hide">
+					<input type="submit" class="submit home-btn btn" value="Sign Up" />
+					<input placeholder="Name:" type="text" name="signup-name" value="" />
+					<input placeholder="Email:" type="text" name="signup-email" value="" />
+					<input placeholder="Password:" type="password" name="signup-pass" value="" />
+					<input placeholder="Confirm Password:" type="password" name="signup-pass-conf" value="" />
+				</form>
+			</section>
+		</div>
+	</body>
+</html>

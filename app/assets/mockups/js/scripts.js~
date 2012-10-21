@@ -1,0 +1,25 @@
+$(document).ready(function() {
+
+  	// Handler for .ready() called.
+	$("#login-form").hide();
+	$("#signup-form").hide();
+	
+	$("#login").click(function() {
+		$("#signup").show();
+		$("#login").hide();
+		$("#login-form:first-child").show();
+		$("#login-form").show("slide", { direction: "up" }, 1000);
+		
+		$("#signup-form").hide("slide", { direction: "up" }, 1000);
+	});
+
+	$("#signup").click(function() {
+		$("#login").show();
+		$("#signup").hide();
+		$("#signup-form").show("slide", { direction: "down" }, 1000);
+		$("#login-form").hide("slide", { direction: "up" }, 1000);
+	});
+	
+
+});
+
