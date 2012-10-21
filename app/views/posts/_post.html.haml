@@ -1,8 +1,5 @@
 %li
   %span.content= post.description
-  %span.timestamp
-    Posted
-    = time_ago_in_words(post.created_at)
-    ago
+  %span.timestamp= "Posted #{time_ago_in_words(post.created_at)} ago"
   - if current_user?(post.user)
     = link_to "delete", post, method: :get, data: {confirm: "Are you sure?"}, title: post.description

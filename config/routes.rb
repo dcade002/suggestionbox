@@ -10,6 +10,9 @@ Suggestionbox::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :posts, only: [:create, :destroy]
 
+  match '/upvote' => 'posts#increment_vote', :via => :put, as: :upvote
+  match '/downvote'=> 'posts#decrement_vote', via: :put, as: :downvote
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
