@@ -1,4 +1,4 @@
-%li{ id: "feed-#{feed_item.id}" }
+%li{ id: "feed-#{feed_item.id}", data: { feed_id: feed_item.id, time: feed_item.created_at.to_i }}
   = link_to gravatar_for(feed_item.user), feed_item.user
   %span.user
     = link_to feed_item.user.name, feed_item.user

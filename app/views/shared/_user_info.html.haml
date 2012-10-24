@@ -4,5 +4,5 @@
   = current_user.name
 %span
   = link_to "view my profile", current_user
-%span
+%span.post-count
   = pluralize(current_user.posts.count, "posts")

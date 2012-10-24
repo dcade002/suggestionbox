@@ -1,4 +1,5 @@
 Suggestionbox::Application.routes.draw do
+
   root :to => 'static_pages#home'
 
   match '/about' => 'static_pages#about', via: :get
@@ -12,6 +13,8 @@ Suggestionbox::Application.routes.draw do
 
   match '/upvote' => 'posts#increment_vote', :via => :put, as: :upvote
   match '/downvote'=> 'posts#decrement_vote', via: :put, as: :downvote
+
+  match '/feed' => 'feed#index', via: :get
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

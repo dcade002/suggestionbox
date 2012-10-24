@@ -1,0 +1,4 @@
+<% if @feed.any? %>
+$('#feed').prepend("<%=raw escape_javascript(render partial: 'shared/feed_item', collection: @feed) %>");
+$('.user-info .post-count').innerHTML = "<%= @post %>"
+<% end %>
