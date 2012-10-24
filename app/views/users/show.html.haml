@@ -6,10 +6,7 @@
         = @user.name
   .span8
     - if @user.posts.any?
-      %h3
-        Posts(
-        = @user.posts.count
-        )
+      %h3= "Posts(#{@user.posts.count})"
       %ol.posts
         = render @posts
       = will_paginate @posts
