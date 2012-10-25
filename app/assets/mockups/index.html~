@@ -23,13 +23,13 @@
 			</section>
 			<section class="home-panel">
 				<a id="login" class="home-btn btn action-btn">Log In</a>
-				<form id="login-form" class="hide">
+				<form id="login-form">
 					<input type="submit" class="submit home-btn btn" value="Log In" />
 					<input placeholder="Username:" type="text" name="login-user" value="" />
 					<input placeholder="Password: " type="password" name="login-pass" value="" />
 				</form>
 				<a id="signup" class="home-btn btn action-btn">Sign Up</a>
-				<form id="signup-form" class="hide">
+				<form id="signup-form">
 					<input type="submit" class="submit home-btn btn" value="Sign Up" />
 					<input placeholder="Name:" type="text" name="signup-name" value="" />
 					<input placeholder="Email:" type="text" name="signup-email" value="" />

@@ -5,16 +5,20 @@ $(document).ready(function() {
 	$("#signup-form").hide();
 	
 	$("#login").click(function() {
-		$("#signup").show();
+		//$("#signup").show();
+		$("#signup").fadeIn();
 		$("#login").hide();
-		$("#login-form").show();
+		//$("#login-form").show();
+		$("#login-form").fadeIn();
 		$("#signup-form").hide();
 	});
 
 	$("#signup").click(function() {
-		$("#login").show();
+		//$("#login").show();
+		$("#login").fadeIn();
 		$("#signup").hide();
-		$("#signup-form").show();
+		//$("#signup-form").show();
+		$("#signup-form").fadeIn();
 		$("#login-form").hide();
 	});
 	
