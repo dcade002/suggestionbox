@@ -5,19 +5,23 @@ $(document).ready(function() {
 	$("#signup-form").hide();
 	
 	$("#login").click(function() {
-		$("#signup").show();
+		//$("#signup").show();
+		$("#signup").fadeIn();
 		$("#login").hide();
-		$("#login-form:first-child").show();
-		$("#login-form").show("slide", { direction: "up" }, 1000);
-		
-		$("#signup-form").hide("slide", { direction: "up" }, 1000);
+		//$("#login-form").show();
+		$("#login-form").fadeIn();
+		//$("#signup-form").hide();
+		$("#signup-form").slideUp().hide();
 	});
 
 	$("#signup").click(function() {
-		$("#login").show();
+		//$("#login").show();
+		$("#login").fadeIn();
 		$("#signup").hide();
-		$("#signup-form").show("slide", { direction: "down" }, 1000);
-		$("#login-form").hide("slide", { direction: "up" }, 1000);
+		//$("#signup-form").show();
+		$("#signup-form").fadeIn();
+		//$("#login-form").hide();
+		$("#login-form").slideUp().hide();
 	});
 	
 
