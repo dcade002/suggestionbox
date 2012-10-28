@@ -9,6 +9,24 @@
       %h3 Post Feed
       = render 'shared/feed'
 - else
-  .center.hero-unit
-    %h1 Sheet-o-Meter
-
+  .row-fluid
+    .span12.banner
+      = image_tag "logo.png", {class: "logo"}
+  .row-fluid.auth-container
+    .span4
+      %br
+    .span4
+      = form_for(:session, url: sessions_path, :html => { class: 'form-horizontal', id: "login-form" }) do |f|
+        = f.submit "Sign In", { class: "submit action-btn signin btn btn-primary", id: "signin-btn" }
+        .control-group#signin-group
+          = f.text_field :email, { placeholder: "Email...", class: "signin-email" }
+          = f.password_field :password, {placeholder: "Password...", class: "signin-password"}
+      = form_for @user, :html => { :class => 'form-horizontal', id: "signup-form" } do |f|
+        = f.submit "Sign Up", { class: "submit action-btn home-btn btn", id: "signup-btn" }
+        .control-group#signup-group
+          = f.text_field :name, { placeholder: "Name...", class: "signup-name" }
+          = f.text_field :email, { placeholder: "Email...", class: "signup-email" }
+          = f.password_field :password, { placeholder: "Password...", class: "signup-password" }
+          = f.password_field :password_confirmation, { placeholder: "Confirm password...", class: "signup-password-confirm" }
+    .span4
+      %br

@@ -1,3 +1,54 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.banner{
+  text-align: center;
+  img{
+    max-height: 600px;
+  }
+}
+
+.auth-container{
+  input, select{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 100%;
+    height: 35px;
+  }
+  input:not(:last-child), select:not(:last-child){
+    border-bottom: none;
+  }
+
+  //.form-horizontal input[class|="signin"], input[class|="signup"]{
+  //  display: none;
+  //}
+
+}
+
+.action-btn
+{
+  background-image: none;
+  color: #ffffff;
+  background-color: #793d1d;
+  border:none;
+  border-radius: 3px;
+  margin-top: 13px;
+  margin-bottom: 0;
+  &.signin{
+    width: 100%;
+  }
+}
+
+
+
+.action-btn:hover,
+.action-btn:active,
+.action-btn.active,
+.action-btn.disabled,
+.action-btn[disabled]
+  {
+  color: #ffffff;
+  background-color: #271003;
+}
