@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.7'
 
+gem 'lessonplanet-acts_as_rateable', :require => 'acts_as_rateable', :git => 'git@github.com:Tonkpils/acts_as_rateable.git'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
