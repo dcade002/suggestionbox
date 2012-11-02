@@ -1,8 +1,9 @@
 GIT
-  remote: git://github.com/Tonkpils/acts_as_rateable.git
-  revision: 3f231011f6b7c2f958e7df033ec7a5f765c61b0d
+  remote: git://github.com/edgarjs/ajaxful-rating.git
+  revision: f22e2c38d601f8279e959fbe9a578b2314235505
+  branch: rails3
   specs:
-    lessonplanet-acts_as_rateable (3.0.1)
+    ajaxful_rating (3.0.0.beta8)
 
 GEM
   remote: https://rubygems.org/
@@ -134,13 +135,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  ajaxful_rating!
   bcrypt-ruby (~> 3.0.0)
   bootstrap-will_paginate
   coffee-rails (~> 3.2.1)
   haml
   haml-rails
   jquery-rails
-  lessonplanet-acts_as_rateable!
   pg
   rails (= 3.2.7)
   sass-rails (~> 3.2.3)

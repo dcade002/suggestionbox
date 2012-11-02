@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121031000358) do
+ActiveRecord::Schema.define(:version => 20121031174754) do
 
   create_table "posts", :force => true do |t|
     t.text     "description"
@@ -23,16 +23,18 @@ ActiveRecord::Schema.define(:version => 20121031000358) do
 
   add_index "posts", ["user_id", "created_at"], :name => "index_posts_on_user_id_and_created_at"
 
-  create_table "ratings", :force => true do |t|
-    t.integer  "rating",                      :default => 0
-    t.string   "rateable_type", :limit => 15, :default => "", :null => false
-    t.integer  "rateable_id",                 :default => 0,  :null => false
-    t.integer  "user_id",                     :default => 0,  :null => false
-    t.datetime "created_at",                                  :null => false
-    t.datetime "updated_at",                                  :null => false
+  create_table "rates", :force => true do |t|
+    t.integer  "rater_id"
+    t.integer  "rateable_id"
+    t.string   "rateable_type"
+    t.integer  "stars",         :null => false
+    t.string   "dimension"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
-  add_index "ratings", ["user_id"], :name => "index_ratings_on_user_id"
+  add_index "rates", ["rateable_id", "rateable_type"], :name => "index_rates_on_rateable_id_and_rateable_type"
+  add_index "rates", ["rater_id"], :name => "index_rates_on_rater_id"
 
   create_table "users", :force => true do |t|
     t.string   "name"

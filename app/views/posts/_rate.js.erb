@@ -1,0 +1,3 @@
+$("#<%= @post.wrapper_dom_id(params) %>").html("<%= escape_javascript(ratings_for(@post, params.merge(:wrap => false),
+                                                    :remote_options => { :url => rate_path(feed_item: @post)})) %> ");
+$("#<%= @post.wrapper_dom_id(params) %>").effect("highlight", {}, 3000);

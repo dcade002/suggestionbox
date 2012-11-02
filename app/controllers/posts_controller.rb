@@ -22,14 +22,25 @@ class PostsController < ApplicationController
     redirect_to root_url
   end
 
-  def increment_vote
-    render status: :bad_request and return unless params[:feed_item].present? || params[:rating].present? || params[:user_id].present?
+  def rate
+    @post = Post.find(params[:feed_item])
+    @post.rate(params[:stars], current_user)
+    respond_to do |format|
+      format.js { render :partial => "rate" }#, status: :ok }
+      #format.html
+    end
+    #render :partial => "rating"
+    #redirect_to root_path and return
 
-    render status: :bad_request and return if params[:rating].to_i > 5 || params[:rating].to_i < 0
-    post = Post.find(params[:feed_item])
-    post.rate_it params[:rating], current_user
-    render json: { post: Post.find( params[:feed_item] ) }, status: :ok
   end
+  #def increment_vote
+  #  render status: :bad_request and return unless params[:feed_item].present? || params[:rating].present? || params[:user_id].present?
+  #
+  #  render status: :bad_request and return if params[:rating].to_i > 5 || params[:rating].to_i < 0
+  #  post = Post.find(params[:feed_item])
+  #  post.rate_it params[:rating], current_user
+  #  render json: { post: Post.find( params[:feed_item] ) }, status: :ok
+  #end
 
   #def decrement_vote
   #  render status: :bad_request and return unless params[:feed_item]

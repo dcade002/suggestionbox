@@ -5,9 +5,7 @@
   %span.content=feed_item.description
   %span.timestamp= "Posted #{time_ago_in_words(feed_item.created_at)} ago"
   - unless current_user?(feed_item.user)
-    - 5.times do |i|
-      = link_to "#{i + 1}", upvote_path( :rating => i + 1, :feed_item => feed_item ), remote: true, method: :put, class: "rate"
-    %p= feed_item.rating
+    = ratings_for feed_item, :remote_options => { :url => rate_path(feed_item: feed_item)}
   - if current_user?(feed_item.user)
     = link_to "delete", feed_item, method: :get, data: {confirm: "Are you sure?"}, title: feed_item.description
 

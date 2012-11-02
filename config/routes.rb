@@ -5,14 +5,17 @@ Suggestionbox::Application.routes.draw do
   match '/about' => 'static_pages#about', via: :get
   match '/signup' => 'users#new', via: :get
   match '/signin' => 'sessions#new', via: :get
-  match '/logout' => 'sessions#destroy', via: :get
+  match '/logout' => 'sessions#destroy', via: :delete
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :posts, only: [:create, :destroy]
 
-  match '/upvote' => 'posts#increment_vote', :via => :put, as: :upvote
-  match '/downvote'=> 'posts#decrement_vote', via: :put, as: :downvote
+  match '/rate' => 'posts#rate', :via => :post, as: :rate
+
+
+  #match '/upvote' => 'posts#increment_vote', :via => :put, as: :upvote
+  #match '/downvote'=> 'posts#decrement_vote', via: :put, as: :downvote
 
   match '/feed' => 'feed#index', via: :get
 
